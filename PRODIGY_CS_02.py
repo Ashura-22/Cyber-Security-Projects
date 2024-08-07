@@ -1,5 +1,5 @@
 print('<-------------------Pixel Manipulation for Image Encryption------------------->')
-from PIL import Image
+from PIL import Image # type: ignore
 
 def shift_pixel_value(value, shift):
     """ Shift the pixel value with wrapping. """
@@ -59,10 +59,11 @@ if __name__ == "__main__":
     input_image_path = "input_image.png"
     encrypted_image_path = "encrypted_image.png"
     decrypted_image_path = "decrypted_image.png"
-    shift_value = 25  # pixel shift value
-
-    encrypt_image(input_image_path, encrypted_image_path, shift_value)
+    
+    shift_value1 = int(input("Enter Shift value for Encryption: "))  # pixel shift value for Encryption
+    encrypt_image(input_image_path, encrypted_image_path, shift_value1)
     print(f"Image encrypted and saved as {encrypted_image_path}")
-
-    decrypt_image(encrypted_image_path, decrypted_image_path, shift_value)
+    
+    shift_value2 = int(input("Enter Shift value for Decryption: "))  # pixel shift value for Decryption
+    decrypt_image(encrypted_image_path, decrypted_image_path, shift_value2)
     print(f"Image decrypted and saved as {decrypted_image_path}")
